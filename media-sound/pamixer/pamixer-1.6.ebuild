@@ -11,7 +11,7 @@ if [[ ${PV} == *9999 ]]; then
 	EGIT_REPO_URI="https://github.com/cdemoulins/${PN}"
 else
 	SRC_URI="https://github.com/cdemoulins/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
-	KEYWORDS="amd64 x86"
+	KEYWORDS="~amd64 ~x86"
 fi
 
 RESTRICT="mirror"
@@ -22,10 +22,6 @@ IUSE=""
 RDEPEND="
 	dev-libs/cxxopts
 	media-sound/pulseaudio"
+"
 
 DEPEND="${RDEPEND}"
-
-src_install() {
-	dobin ${PN}
-	dodoc README.rst
-}
