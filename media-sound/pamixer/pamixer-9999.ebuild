@@ -22,6 +22,5 @@ IUSE=""
 RDEPEND="
 	dev-libs/cxxopts
 	media-sound/pulseaudio"
-"
 
 DEPEND="${RDEPEND}"
