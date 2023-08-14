@@ -1,5 +1,5 @@
 BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
-DEFINED_PHASES=install unpack
+DEFINED_PHASES=unpack
 DEPEND=dev-libs/cxxopts media-sound/pulseaudio
 DESCRIPTION=Pulseaudio command line mixer.
 EAPI=7
@@ -11,4 +11,4 @@ RDEPEND=dev-libs/cxxopts media-sound/pulseaudio
 RESTRICT=mirror
 SLOT=0
 _eclasses_=git-r3	2358a7b20091609e24bd3a83b3ac5991
-_md5_=dd220c11d5a01bd52c77f165e33b569c
+_md5_=c902d056a8ed9addeee27e36cb0b7a0a
