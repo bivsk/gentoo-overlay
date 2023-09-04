@@ -49,10 +49,10 @@ src_install() {
 
 	fperms +x /opt/${MY_PN}/bin/${MY_PN_BIN}
 	dosym /opt/${MY_PN}/bin/${MY_PN_BIN} /usr/bin/${MY_PN_BIN}
-	dosym /opt/${MY_PN}/share/applications/${MY_PN}.desktop \
-		/usr/share/applications/${MY_PN}.desktop
-	dosym /opt/${MY_PN}/share/icons/hicolor/256x256/apps/${MY_PN}.png \
-		/usr/share/icons/hicolor/256x256/apps/${MY_PN}.png
+	dosym /opt/${MY_PN}/share/applications/${MY_PN_BIN}.desktop \
+		/usr/share/applications/${MY_PN_BIN}.desktop
+	dosym /opt/${MY_PN}/share/icons/hicolor/256x256/apps/${MY_PN_BIN}.png \
+		/usr/share/icons/hicolor/256x256/apps/${MY_PN_BIN}.png
 }
 
 pkg_preinst() {
