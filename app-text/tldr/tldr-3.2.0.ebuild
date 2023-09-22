@@ -3,7 +3,8 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{10..12} )
+DISTUTILS_USE_PEP517=setuptools
+PYTHON_COMPAT=( python3_{10..11} )
 
 inherit distutils-r1 pypi
 
@@ -15,11 +16,10 @@ SLOT="0"
 KEYWORDS="~amd64"
 
 DEPEND="
-	${PYTHON_DEPS}
-	dev-python/argcomplete[${PYTHON_USEDEP}]
-	dev-python/colorama[${PYTHON_USEDEP}]
-	dev-python/termcolor[${PYTHON_USEDEP}]
+	dev-python/termcolor
+	dev-python/colorama
 "
+
 RDEPEND="
 	${DEPEND}
 	!app-misc/tealdeer
