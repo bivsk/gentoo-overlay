@@ -11,7 +11,8 @@ inherit distutils-r1
 DESCRIPTION="Python command line client for tldr pages"
 HOMEPAGE="https://github.com/tldr-pages/tldr-python-client"
 SRC_URI="
-	https://github.com/tldr-pages/tldr-python-client/archive/${PV}/${P}.tar.gz
+	https://github.com/tldr-pages/tldr-python-client/archive/refs/tags/3.2.0.tar.gz
+		-> ${P}.tar.gz
 "
 
 LICENSE="MIT"
