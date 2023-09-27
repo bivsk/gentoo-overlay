@@ -85,7 +85,7 @@ pkg_setup() {
 					grep GLIBCXX_RELEASE | sed 's/.*\([1-9][0-9]\)/\1/')
 
 		if ! [[ ${STDLIBVER} -ge 13 ]]; then
-			die "Hyprland requires >=sys-devel/gcc-13.2.1_p20230826 to build"
+			die "Hyprland requires >=sys-devel/gcc-13.2.1 to build"
 		fi
 	elif [[ $(clang-major-version) -lt 16 ]]; then
 		die "Hyprland requires >=sys-devel/clang-16.0.3 to build";
@@ -96,10 +96,6 @@ src_prepare() {
 	if use video_cards_nvidia; then
 		cd "${S}/subprojects/wlroots" || die
 		eapply "${S}/nix/patches/wlroots-nvidia.patch"
-		# https://bugs.gentoo.org/911597
-		# https://github.com/hyprwm/Hyprland/pull/2874
-		# https://github.com/hyprwm/Hyprland/blob/main/nix/wlroots.nix#L54
-		sed -i -e 's/glFlush();/glFinish();/' render/gles2/renderer.c || die
 		cd "${S}" || die
 	fi
 
