@@ -37,6 +37,7 @@ RDEPEND="
 	x11-libs/pango
 	pulseaudio? (
 		media-sound/pulseaudio
+		dev-python/pulsectl-asyncio
 	)
 	wayland? (
 		>=dev-python/pywlroots-0.16[${PYTHON_USEDEP}]
@@ -65,17 +66,9 @@ BDEPEND="
 distutils_enable_tests pytest
 
 python_prepare_all() {
-	# Avoid automagic dependency on libpulse
-	if ! use pulseaudio ; then
-		sed -i -e "s/call('libpulse', '--libs')/raise PkgConfigError/" setup.py || die
-
-		# TODO: use this sed for next release after 0.22.1, quoting changed
-		# sed -i -e 's/call("libpulse", "--libs")/throw PkgConfigError/' setup.py || die
-	fi
-
 	# Avoid automagic dependency on pywlroots
 	if ! use wayland ; then
-		sed -i -e 's/import wlroots.ffi_build/raise ImportError/' setup.py || die
+		sed -i -e 's/can_import("wlroots.ffi_build")/False/' setup.py || die
 	fi
 
 	distutils-r1_python_prepare_all
