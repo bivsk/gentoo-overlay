@@ -40,7 +40,7 @@ RDEPEND="
 	)
 	wayland? (
 		>=dev-python/pywlroots-0.16[${PYTHON_USEDEP}]
-		>=dev-python/wlroots-0.16.4
+		>=gui-libs/wlroots-0.16.4
 	)
 "
 BDEPEND="
