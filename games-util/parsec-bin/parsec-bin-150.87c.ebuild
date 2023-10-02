@@ -5,7 +5,7 @@ EAPI=6
 
 MY_PN=${PN/-bin/}
 MY_PN_BIN=${PN/-bin/d}
-inherit eutils gnome2-utils unpacker
+inherit unpacker
 
 DESCRIPTION="Simple, low-latency game streaming"
 HOMEPAGE="https://parsecgaming.com/"

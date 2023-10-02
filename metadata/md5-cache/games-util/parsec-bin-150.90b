@@ -8,6 +8,6 @@ LICENSE=all-rights-reserved
 RDEPEND=sys-libs/glibc sys-devel/gcc[cxx] media-libs/alsa-lib media-libs/mesa media-video/ffmpeg dev-libs/openssl virtual/libudev x11-libs/libX11 x11-libs/libXi x11-libs/libXinerama x11-libs/libXrandr
 RESTRICT=mirror bindist
 SLOT=0
-SRC_URI=https://builds.parsec.app/package/parsec-linux.deb -> parsec-bin-150.87c.deb
+SRC_URI=https://builds.parsec.app/package/parsec-linux.deb -> parsec-bin-150.90b.deb
 _eclasses_=multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	fbbbc99d10168de2926e06da7169b8dc	multilib	c19072c3cd7ac5cb21de013f7e9832e0	unpacker	aa6a4e924009232d8b78b31e932c30b5
 _md5_=e868c24ba4f40c7ab5e82df56c166bca
