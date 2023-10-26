@@ -23,9 +23,6 @@ LICENSE="MIT"
 SLOT="0"
 IUSE="pulseaudio wayland"
 
-# See bug #895722 and https://github.com/qtile/qtile/pull/3985 regarding
-# pywlroots-0.15 dep.
-# xcffib v1.4.0 breaks its ffi export (https://github.com/qtile/qtile/pull/4289)
 RDEPEND="
 	>=dev-python/cairocffi-1.6.0[${PYTHON_USEDEP}]
 	>=dev-python/cffi-1.1.0[${PYTHON_USEDEP}]
@@ -41,6 +38,8 @@ RDEPEND="
 	)
 	wayland? (
 		>=dev-python/pywlroots-0.16[${PYTHON_USEDEP}]
+		dev-python/pywayland
+		dev-python/xkbcommon
 		>=gui-libs/wlroots-0.16.2
 	)
 "
