@@ -38,6 +38,7 @@ RDEPEND="
 		dev-python/aiohttp[${PYTHON_USEDEP}]
 		dev-python/beautifulsoup4[${PYTHON_USEDEP}]
 		dev-python/cffi[${PYTHON_USEDEP}]
+		dev-python/colorthief[${PYTHON_USEDEP}]
 		dev-python/cryptography[${PYTHON_USEDEP}]
 		dev-python/dateparser[${PYTHON_USEDEP}]
 		dev-python/emoji[${PYTHON_USEDEP}]
@@ -55,7 +56,6 @@ RDEPEND="
 	')
 "
 BDEPEND="
-	dev-util/blueprint-compiler
 	sys-devel/gettext
 	test? (
 		$(python_gen_cond_dep '
