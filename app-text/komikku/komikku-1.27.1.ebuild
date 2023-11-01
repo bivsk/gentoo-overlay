@@ -55,6 +55,7 @@ RDEPEND="
 	')
 "
 BDEPEND="
+	dev-util/blueprint-compiler
 	sys-devel/gettext
 	test? (
 		$(python_gen_cond_dep '
