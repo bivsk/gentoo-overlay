@@ -9,6 +9,8 @@ KDE_ORG_CATEGORY="system"
 inherit ecm kde.org
 
 DESCRIPTION="Screenshare Wayland windows to XWayland apps"
+HOMEPAGE="https://planet.kde.org/david-edmundson-2023-03-22-fixing-wayland-xwayland-screen-casting/
+https://invent.kde.org/system/xwaylandvideobridge"
 
 if [[ ${KDE_BUILD_TYPE} == release ]]; then
 	KEYWORDS="~amd64"
@@ -30,7 +32,7 @@ DEPEND="
 	>=kde-plasma/kpipewire-5.27.4:5
 	media-libs/freetype
 	x11-libs/libxcb:=
+	x11-libs/xcb-util
 "
 RDEPEND="${DEPEND}"
-
 BDEPEND="virtual/pkgconfig"
