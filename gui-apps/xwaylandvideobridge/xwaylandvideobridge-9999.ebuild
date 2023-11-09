@@ -13,6 +13,7 @@ HOMEPAGE="https://planet.kde.org/david-edmundson-2023-03-22-fixing-wayland-xwayl
 https://invent.kde.org/system/xwaylandvideobridge"
 
 if [[ ${KDE_BUILD_TYPE} == release ]]; then
+	SRC_URI="mirror://kde/stable/${PN}/${P}.tar.xz"
 	KEYWORDS="~amd64"
 fi
 
