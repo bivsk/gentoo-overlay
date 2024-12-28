@@ -15,6 +15,7 @@ SRC_URI="
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
+IUSE="uuctl uwsm-app"
 
 RDEPEND="
 		dev-python/pyxdg
@@ -22,3 +23,16 @@ RDEPEND="
 		sys-apps/dbus-broker
 "
 DEPEND="${RDEPEND}"
+
+src_configure() {
+	local myemesonargs=(
+		$(meson_feature uuctl uuctl)
+		$(meson_feature uwsm-app uwsm-app)
+	)
+	meson_src_configure
+}
+
+pkg_postinst() {
+	elog "To properly configure uwsm, ensure that dbus-broker is used as the D-Bus daemon."
+	elog "Consider running 'uwsm finalize' with the necessary environment variables after starting your compositor."
+}
