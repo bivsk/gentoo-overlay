@@ -15,9 +15,21 @@ SRC_URI="
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="uuctl uwsm-app"
+IUSE="libnotify menu select uuctl uwsm-app"
 
 RDEPEND="
+		libnotify? ( x11-libs/libnotify )
+		menu? (
+			dev-libs/bemenu
+			gui-apps/fuzzel
+			gui-apps/rofi-wayland
+			gui-apps/tofi
+			gui-apps/walker
+			gui-apps/wmenu
+			gui-apps/wofi
+			x11-misc/dmenu
+		)
+		select? ( dev-libs/newt )
 		dev-python/pyxdg
 		dev-python/dbus-python
 		sys-apps/dbus-broker
