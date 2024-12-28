@@ -3,12 +3,12 @@
 
 EAPI=8
 
-inherit git-r3 meson
+inherit meson
 
 DESCRIPTION="Universal Wayland Session Manager"
 HOMEPAGE="https://github.com/Vladimir-csp/uwsm"
 SRC_URI="
-	https://github.com/Vladimir-csp/uwsm/archive/v${PV}.tar.gz
+	https://github.com/Vladimir-csp/uwsm/archive/refs/tags/v${PV}.tar.gz
 			-> ${P}.gh.tar.gz
 "
 
@@ -22,7 +22,3 @@ RDEPEND="
 		sys-apps/dbus-broker
 "
 DEPEND="${RDEPEND}"
-
-# src_configure() {
-# 	meson_src_configure
-# }
