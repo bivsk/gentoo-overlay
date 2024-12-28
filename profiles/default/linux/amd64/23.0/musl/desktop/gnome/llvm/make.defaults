@@ -1,0 +1,2 @@
+USE="qt6 vaapi vdpau"
+USE="${USE} -a52 -activities -cdda -cdr -dvd -dvdr -kwallet"
