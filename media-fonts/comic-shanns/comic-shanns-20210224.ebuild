@@ -15,11 +15,14 @@ IUSE="+otf ttf"
 
 REQUIRED_USE="|| ( otf ttf )"
 
+# Use v2
+S+="/v2"
+
 src_install() {
 	if use otf; then
-		FONT_S="${S}/v2" FONT_SUFFIX="otf" font_src_install
+		FONT_SUFFIX="otf" font_src_install
 	fi
 	if use ttf; then
-		FONT_S="${S}/v2" FONT_SUFFIX="ttf" font_src_install
+		FONT_SUFFIX="ttf" font_src_install
 	fi
 }
