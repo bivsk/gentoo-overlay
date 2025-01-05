@@ -28,6 +28,8 @@ src_install() {
 
 	insinto /usr/share/${PN}/lua
 	doins skip.lua
+
+	dodoc README.md
 }
 
 pkg_postinst() {
