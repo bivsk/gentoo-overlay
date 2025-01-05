@@ -3,11 +3,14 @@
 
 EAPI=8
 
-inherit font git-r3
+inherit font
 
 DESCRIPTION="A classy font"
 HOMEPAGE="https://github.com/shannpersand/comic-shanns"
-EGIT_REPO_URI="https://github.com/shannpersand/comic-shanns"
+KEYWORDS="amd64 arm arm64 x86"
+SRC_URI="
+	https://github.com/shannpersand/comic-shanns/archive/refs/heads/master.zip -> ${P}.zip
+"
 
 LICENSE="MIT"
 SLOT="0"
@@ -15,8 +18,7 @@ IUSE="+otf ttf"
 
 REQUIRED_USE="|| ( otf ttf )"
 
-# Use v2
-S+="/v2"
+S="${WORKDIR}/${PN}-master/v2"
 
 src_install() {
 	if use otf; then
