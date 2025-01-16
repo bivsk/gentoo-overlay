@@ -270,5 +270,17 @@ src_setup() {
 
 src_install() {
 	cargo_src_install --path ./lla
+
 	dodoc README.md
+
+	local releasedir=$(cargo_target_dir)
+	insinto /usr/share/lla/plugins
+	doins ${releasedir}/*.so
+
+}
+
+pkg_postinst() {
+	elog "Plugins are installed in /usr/share/lla/plugins"
+	elog "In the lla config, set $(plugins_dir) to this directory"
+	elog "or copy to your user's home directory."
 }
