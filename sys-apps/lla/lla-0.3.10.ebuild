@@ -273,12 +273,14 @@ src_install() {
 
 	dodoc README.md
 
+	# TODO: do all arch's use .so ?
 	local releasedir=$(cargo_target_dir)
 	insinto /usr/share/lla/plugins
 	doins ${releasedir}/*.so
 
 }
 
+# TODO: how to best handle updates and user installed plugins?
 pkg_postinst() {
 	elog "Plugins are installed in /usr/share/lla/plugins"
 	elog "In the lla config, set $(plugins_dir) to this directory"
