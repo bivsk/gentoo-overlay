@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM 'https://www.gentoo.org/dtd/metadata.dtd'>
+<pkgmetadata>
+  <maintainer type="person">
+    <email>bivsk@tutanota.com</email>
+    <name>bivsk</name>
+  </maintainer>
+  <use>
+    <flag name="plugins">Install official lla plugins</flag>
+  </use>
+  <upstream>
+    <remote-id type="github">chaqchase/lla</remote-id>
+  </upstream>
+</pkgmetadata>
