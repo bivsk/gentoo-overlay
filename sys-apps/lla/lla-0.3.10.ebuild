@@ -259,7 +259,6 @@ KEYWORDS="~amd64"
 DEPEND="
 	dev-libs/oniguruma:=
 "
-
 BDEPEND="virtual/pkgconfig"
 
 src_setup() {
@@ -280,9 +279,8 @@ src_install() {
 
 }
 
-# TODO: how to best handle updates and user installed plugins?
 pkg_postinst() {
 	elog "Plugins are installed in /usr/share/lla/plugins"
-	elog "In the lla config, set $(plugins_dir) to this directory"
-	elog "or copy to your user's home directory."
+	elog "Copy these plugins to ~/.config/lla/plugins"
+	elog "This may be necessary after each upgrade to lla"
 }
