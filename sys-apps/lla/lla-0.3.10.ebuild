@@ -255,6 +255,7 @@ LICENSE+="
 "
 SLOT="0"
 KEYWORDS="~amd64"
+IUSE="+plugins"
 
 DEPEND="
 	dev-libs/oniguruma:=
@@ -275,7 +276,7 @@ src_install() {
 	# TODO: do all arch's use .so ?
 	local releasedir=$(cargo_target_dir)
 	insinto /usr/share/lla/plugins
-	doins ${releasedir}/*.so
+	use plugins && doins ${releasedir}/*.so
 
 }
 
