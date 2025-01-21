@@ -16,9 +16,6 @@ S="${WORKDIR}/comic-mono-font-master"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~arm64 ~loong ~ppc64 ~riscv ~x86"
-IUSE="+otf ttf"
-
-REQUIRED_USE="|| ( otf ttf )"
 
 RESTRICT="binchecks strip"
 
