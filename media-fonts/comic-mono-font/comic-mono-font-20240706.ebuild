@@ -20,11 +20,8 @@ IUSE="+otf ttf"
 
 REQUIRED_USE="|| ( otf ttf )"
 
-BDEPEND="app-arch/unzip"
-
 RESTRICT="binchecks strip"
 
-src_install() {
-	use otf && FONT_SUFFIX="otf" font_src_install
-	use ttf && FONT_SUFFIX="ttf" font_src_install
-}
+BDEPEND="app-arch/unzip"
+
+FONT_SUFFIX="ttf"
