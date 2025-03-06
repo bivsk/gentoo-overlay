@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM 'https://www.gentoo.org/dtd/metadata.dtd'>
+<pkgmetadata>
+  <maintainer type="person">
+    <email>bivsk@tutanota.com</email>
+    <name>bivsk</name>
+  </maintainer>
+  <upstream>
+    <remote-id type="github">hyperliquid-dex/hyperliquid-python-sdk</remote-id>
+  </upstream>
+</pkgmetadata>

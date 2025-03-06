@@ -20,6 +20,10 @@ KEYWORDS="~amd64"
 
 RESTRICT="strip"
 
+RDEPEND="
+	net-libs/webkit-gtk:4.1
+"
+
 src_install() {
 	domenu usr/share/applications/Tari\ Universe.desktop
 	for size in {32,128,512}; do
