@@ -44,6 +44,11 @@ src_configure() {
 	meson_src_configure
 }
 
+src_install() {
+	meson_src_install
+	mv "${ED}"/usr/share/doc/uwsm "${ED}"/usr/share/doc/${PF}
+}
+
 pkg_postinst() {
 	elog "To properly configure uwsm, ensure that dbus-broker is used as the D-Bus daemon."
 	elog "Consider running 'uwsm finalize' with the necessary environment variables after starting your compositor."
