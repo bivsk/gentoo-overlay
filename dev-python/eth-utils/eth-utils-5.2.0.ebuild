@@ -6,7 +6,7 @@ EAPI=8
 PYTHON_COMPAT=(python3_{10..13})
 DISTUTILS_USE_PEP517=setuptools
 
-inherit python-r1
+inherit distutils-r1
 
 DESCRIPTION="Utility functions for working with ethereum related codebases."
 
