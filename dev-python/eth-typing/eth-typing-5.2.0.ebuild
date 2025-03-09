@@ -23,10 +23,7 @@ S="${WORKDIR}/${PN//-/_}-${PV}"
 RESTRICT="test"
 
 DEPENDENCIES="
-	dev-python/eth-hash[${PYTHON_USEDEP}]
-	dev-python/eth-typing[${PYTHON_USEDEP}]
-	dev-python/cytoolz[${PYTHON_USEDEP}]
-	dev-python/toolz[${PYTHON_USEDEP}]
+	dev-python/typing-extensions
 	docs? ( dev-python/sphinx[${PYTHON_USEDEP}] )
 	docs? ( dev-python/sphinx-autobuild[${PYTHON_USEDEP}] )
 	docs? ( dev-python/sphinx-rtd-theme[${PYTHON_USEDEP}] )
