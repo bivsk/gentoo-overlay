@@ -10,7 +10,7 @@ HOMEPAGE="
 	https://universe.tari.com
 	https://tari.com
 "
-SRC_URI="https://github.com/tari-project/universe/releases/download/v${PV}/Tari.Universe-${PV}-1.x86_64.rpm"
+SRC_URI="https://github.com/tari-project/universe/releases/download/v${PV}/tari_universe-${PV}-1.x86_64.rpm"
 
 S="${WORKDIR}"
 
