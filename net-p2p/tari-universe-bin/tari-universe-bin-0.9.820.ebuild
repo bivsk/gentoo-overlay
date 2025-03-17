@@ -10,7 +10,7 @@ HOMEPAGE="
 	https://universe.tari.com
 	https://tari.com
 "
-SRC_URI="https://github.com/tari-project/universe/releases/download/v${PV}/Tari.Universe-${PV}-1.x86_64.rpm"
+SRC_URI="https://github.com/tari-project/universe/releases/download/v${PV}/tari_universe-${PV}-1.x86_64.rpm"
 
 S="${WORKDIR}"
 
@@ -20,12 +20,16 @@ KEYWORDS="~amd64"
 
 RESTRICT="strip"
 
+RDEPEND="
+	net-libs/webkit-gtk:4.1
+"
+
 src_install() {
-	domenu usr/share/applications/Tari\ Universe.desktop
+	domenu usr/share/applications/tari_universe.desktop
 	for size in {32,128,512}; do
-		doicon -s ${size} usr/share/icons/hicolor/${size}x${size}/apps/Tari\ Universe.png
+		doicon -s ${size} usr/share/icons/hicolor/${size}x${size}/apps/tari_universe.png
 	done
 
-	dobin usr/bin/Tari\ Universe
+	dobin usr/bin/tari_universe
 
 }
